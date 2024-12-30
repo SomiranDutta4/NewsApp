@@ -56,13 +56,13 @@ const NewsSection = ({ filter, setNewsShowing }) => {
 const styles = StyleSheet.create({
   mainNewsContainer: {
     height: Dimensions.get('window').height * 0.72,
-    width: Dimensions.get('window').width, // 90% of the screen height
+    width: Dimensions.get('window').width,
     // overflow:'scroll',
     flex: '1'
   },
   imageBackground: {
-    height: 200, 
-    justifyContent: 'flex-end', 
+    height: 200,
+    justifyContent: 'flex-end',
     padding: 10,
   },
   sourceContainer: {

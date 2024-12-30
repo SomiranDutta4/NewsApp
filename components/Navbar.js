@@ -1,3 +1,5 @@
+import { faBackward, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
@@ -16,12 +18,14 @@ export default function Navbar({ accountPage, setAccPage, newsShowing, setNewsSh
       <Text style={styles.heading}>NewsApp</Text>
       {(newsShowing !== -1 || accountPage) && 
         <TouchableOpacity style={styles.button} onPress={handleBackPress}>
-          <Image style={styles.imageButton} source={require('../pics/back-arrow-icon.webp')} />
+          {/* <Image style={styles.imageButton} source={require('../pics/back-arrow-icon.webp')} /> */}
+          <FontAwesomeIcon style={styles.imageButton} icon={faBackward}></FontAwesomeIcon>
         </TouchableOpacity>
       }
       {!accountPage && newsShowing === -1 &&
         <TouchableOpacity onPress={handleAccPress}>
-          <Image style={styles.imageButton} source={require('../pics/account-25.png')} />
+          {/* <Image style={styles.imageButton} source={require('../pics/account-25.png')} /> */}
+          <FontAwesomeIcon style={styles.imageButton} icon={faUser}></FontAwesomeIcon>
         </TouchableOpacity>
       }
     </View>
@@ -29,10 +33,6 @@ export default function Navbar({ accountPage, setAccPage, newsShowing, setNewsSh
 }
 
 const styles = StyleSheet.create({
-  imageButton: {
-    height: 40,
-    width: 40,
-  },
   navbar: {
     width: '100%',
     flexDirection: 'row',
@@ -51,9 +51,10 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 15,
     borderRadius: 5,
+    justifyContent:'center'
   },
   buttonText: {
-    color: '#6200EE',
+    color: 'grey',
     fontSize: 16,
     fontWeight: 'bold',
   },

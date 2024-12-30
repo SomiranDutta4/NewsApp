@@ -64,14 +64,14 @@ export default function HomepageNav({ setFilter }) {
         </TouchableOpacity>
       </View>
       <View style={styles.closeView}>
-      {activeFilter !== -1 && (
-        <TouchableOpacity
-          style={styles.clearButton}
-          onPress={() => filterHandler(-1)}
-        >
-          <Text style={styles.clearText}>✕</Text>
-        </TouchableOpacity>
-      )}
+        {activeFilter !== -1 && (
+          <TouchableOpacity
+            style={styles.clearButton}
+            onPress={() => filterHandler(-1)}
+          >
+            <Text style={styles.clearText}>✕</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -82,15 +82,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-    backgroundColor:'white'
+    padding: 12,
+    backgroundColor: 'white'
   },
   navButtonContainer: {
     flexDirection: 'row',
-    width:Dimensions.get('window').width*0.7,
+    width: Dimensions.get('window').width * 0.7,
     flex: 1,
     justifyContent: 'space-evenly',
   },
@@ -99,8 +96,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 5,
-    borderStyle:'solid',
-    borderColor:'black',
     borderRadius: 8,
     backgroundColor: '#f0f0f0',
     paddingVertical: 5,
@@ -117,7 +112,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   clearButton: {
-    marginLeft: 10,
+    marginHorizontal: 10,
     borderRadius: 6,
     padding: 5,
     alignItems: 'center',

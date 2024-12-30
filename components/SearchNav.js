@@ -1,3 +1,5 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React from 'react';
 import { View, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
@@ -10,10 +12,7 @@ const SearchNav = () => {
         placeholderTextColor="#888"
       />
       <TouchableOpacity style={styles.searchButton}>
-        <Image
-          source={require('../pics/rightArrow.jpg')}
-          style={styles.searchIcon}
-        />
+        <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
       </TouchableOpacity>
     </View>
   );
@@ -41,10 +40,6 @@ const styles = StyleSheet.create({
   },
   searchButton: {
     marginLeft: 10,
-  },
-  searchIcon: {
-    width: 40,
-    height: 40,
   },
 });
 

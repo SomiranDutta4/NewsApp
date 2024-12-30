@@ -9,8 +9,8 @@ const MainSearchPage = () => {
   )
 }
 const styles = StyleSheet.create({
-    container:{
-        height:Dimensions.get('window').height*0.75
-    }
-  });
+  container: {
+    height: Dimensions.get('window').height * 0.75
+  }
+});
 export default MainSearchPage
